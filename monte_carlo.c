@@ -5,6 +5,12 @@
 
 float mc_pi(int);
 
+float frandom() {
+  long int q = random();
+  float ret = (float)q/(float)RAND_MAX;
+  return ret;
+}
+
 float mc_pi(int n){
   float x,y;
   int i=0,circle=0;
@@ -41,11 +47,7 @@ float mc_pi(int n){
   
 }
 
-float frandom() {
-  long int q = random();
-  float ret = (float)q/(float)RAND_MAX;
-  return ret;
-}
+
 
 int main(void) {
   float pi0;
